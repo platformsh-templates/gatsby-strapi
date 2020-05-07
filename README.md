@@ -15,6 +15,8 @@ Gatsby is a free and open source framework based on React that helps developers 
 * Node.js 12
 * PostgreSQL 12
 
+small change
+
 ## Post-install
 
 This template uses Strapi's [Starter Gatsby Blog](https://github.com/strapi/strapi-starter-gatsby-blog) to deploy a multi-app project on Platform.sh. After it has deployed however, you will still need to manually set up Strapi's Admin Panel and an initial piece of content so that the Gatsby frontend application can fully build.
@@ -72,7 +74,7 @@ Return to the Content-Types Builder, and add a new field to the `Articles` colle
 
 - **Relation**
   - On the right hand dropdown, select Category
-  - Then select the "many-to-one" icon, which will read `Category has many Articles` when selected. 
+  - Then select the "many-to-one" icon, which will read `Category has many Articles` when selected.
 
 Visit the `Category` collection in the upper left section of the sidebar, and then click `Add New Category`. Name it whatever you'd like. On the right hand side in the `Articles` dropdown menu, select the article you created, then click Save.
 
