@@ -10,7 +10,7 @@ type: 'nodejs:14'
 hooks:
     # Build hooks can modify the application files on disk but not access any services like databases.
     post_deploy: |
-      npm run build
+      npm run build --verbose
 # The size of the persistent disk of the application (in MB).
 disk: 1024
 
