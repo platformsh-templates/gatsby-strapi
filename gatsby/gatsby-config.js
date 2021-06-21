@@ -15,7 +15,7 @@ if ( config.isValidPlatform() ) {
 module.exports = {
   siteMetadata: {
     title: "My super blog",
-    description: "Gatsby blog with Strapi",
+    description: "DealExMachina",
     author: "Strapi team",
   },
   plugins: [
