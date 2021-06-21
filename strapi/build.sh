@@ -7,6 +7,7 @@ mv tmp-app/* . && rm -rf tmp-app
 # Install additional dependencies.
 yarn add pg
 yarn add platformsh-config
+yarn add strapi-plugin-graphql
 
 # Move the Platform.sh-specific configuration.
 rm config/environments/development/database.json && mv platformsh/database.js config/environments/development/database.js
