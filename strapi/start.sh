@@ -4,11 +4,11 @@
 # You can add new Content Types from the start, but you should replace your start
 # command with `yarn start` for production environments when taking the
 # application live. (Example below)
-yarn develop
+#yarn develop
 
 # Environment-specific configuration for Strapi.
-# if [ "$PLATFORM_BRANCH" = master ]; then
-#    yarn start
-# else
-#    yarn develop
-# fi
+if [ "$PLATFORM_BRANCH" = master ]; then
+   yarn start
+else
+   yarn develop
+fi
