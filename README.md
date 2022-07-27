@@ -14,12 +14,12 @@ Gatsby is a free and open source framework based on React that helps developers 
 
 ## Features
 
-* Node.js 14
-* PostgreSQL 12
-* Automatic TLS certificates
-* yarn-based build
-* Multi-app configuration
-* Delayed SSG build (post deploy hook)
+- Node.js 14
+- PostgreSQL 12
+- Automatic TLS certificates
+- yarn-based build
+- Multi-app configuration
+- Delayed SSG build (post deploy hook)
 
 ## Post-install
 
@@ -30,6 +30,7 @@ This template uses Strapi's [Starter Gatsby Blog](https://github.com/strapi/stra
 Visit the `backend.<generated url>` subdomain. Strapi will direct you to visit the `/admin` path to register an administrative user. You will need to register an admin user before any API endpoints can be created.
 
 ### Set up the API
+
 Once you have registered the admin user, you will have access to the **Admin Panel**, and from there you can begin adding Content Types to build out the API.
 The frontend Gatsby application will attempt to index two content types by default: Articles and Categories.
 
@@ -63,7 +64,7 @@ Then, visit the `Articles` Collection, and `Add a New Article` to test. Include 
 
 #### Categories
 
-Return to the Content-Types Builder, and `Create a new collection type` called (Display name) `category` with two  fields:
+Return to the Content-Types Builder, and `Create a new collection type` called (Display name) `category` with two fields:
 
 - **Text**
   - Base Settings:
@@ -86,8 +87,8 @@ Visit the `Category` collection in the upper left section of the sidebar, and th
 
 Visit `Roles & Permissions` in the sidebar, and select `Public` permissions. Then adjust the permissions for your two collections:
 
-  - `Category`: select `find` and `findone`
-  - `Article`: select `find` and `findone`
+- `Category`: select `find` and `findone`
+- `Article`: select `find` and `findone`
 
 Save your changes.
 
@@ -113,18 +114,18 @@ API_URL="https://www.backend.pr-1-djjnuwy-muwzogvpcpoe2.eu-3.platformsh.site"
 
 ## Customizations
 
-The following files and additions make the framework work.  If using this project as a reference for your own existing project, replicate the changes below to your project.
+The following files and additions make the framework work. If using this project as a reference for your own existing project, replicate the changes below to your project.
 
-* The `.platform.app.yaml`, `.platform/services.yaml`, and `.platform/routes.yaml` files have been added.  These provide Platform.sh-specific configuration and are present in all projects on Platform.sh.  You may customize them as you see fit.
-* An additional Platform.sh configuration reader module for [Node.js](https://github.com/platformsh/config-reader-nodejs) has been added. It provides convenience wrappers for accessing the Platform.sh environment variables.
-* `frontend/gatsby-config.js` has been modified to read the Strapi backend url and assign it to the `apiURL` attribute for the `gatsby-source-strapi` plugin. Since routes are not available during the build hook, and since we want this value to be generated and unique on each environment, `gatsby build` runs and pulls in content from the Wordpress app during the `post_deploy` hook on the mounted `public` directory.
-* For Strapi, the `start` command calls the script `backend/start.sh`, which is configured to run Strapi as a development environment, allowing you to create new Content Types once it is deployed, even on the master/production branch of your project. We recommend adjusting this command to run Strapi in `production` mode on the master branch (`start.sh` includes an example environment-specific start command that can be used to accomplish this).
+- The `.platform.app.yaml`, `.platform/services.yaml`, and `.platform/routes.yaml` files have been added. These provide Platform.sh-specific configuration and are present in all projects on Platform.sh. You may customize them as you see fit.
+- An additional Platform.sh configuration reader module for [Node.js](https://github.com/platformsh/config-reader-nodejs) has been added. It provides convenience wrappers for accessing the Platform.sh environment variables.
+- `frontend/gatsby-config.js` has been modified to read the Strapi backend url and assign it to the `apiURL` attribute for the `gatsby-source-strapi` plugin. Since routes are not available during the build hook, and since we want this value to be generated and unique on each environment, `gatsby build` runs and pulls in content from the Wordpress app during the `post_deploy` hook on the mounted `public` directory.
+- For Strapi, the `start` command calls the script `backend/start.sh`, which is configured to run Strapi as a development environment, allowing you to create new Content Types once it is deployed, even on the master/production branch of your project. We recommend adjusting this command to run Strapi in `production` mode on the master branch (`start.sh` includes an example environment-specific start command that can be used to accomplish this).
 
 ## References
 
-* [Gatsby](https://www.gatsbyjs.org/)
-* [gatsby-source-strapi on GitHub](https://github.com/strapi/gatsby-source-strapi)
-* [Building a Static Blog using Gatsby and Strapi](https://strapi.io/blog/build-a-static-blog-with-gatsby-and-strapi)
-* [Gatsby CMS with Strapi](https://strapi.io/gatsby-cms)
-* [Strapi](https://strapi.io/)
-* [Node.js on Platform.sh](https://docs.platform.sh/languages/nodejs.html)
+- [Gatsby](https://www.gatsbyjs.org/)
+- [gatsby-source-strapi on GitHub](https://github.com/strapi/gatsby-source-strapi)
+- [Building a Static Blog using Gatsby and Strapi](https://strapi.io/blog/build-a-static-blog-with-gatsby-and-strapi)
+- [Gatsby CMS with Strapi](https://strapi.io/gatsby-cms)
+- [Strapi](https://strapi.io/)
+- [Node.js on Platform.sh](https://docs.platform.sh/languages/nodejs.html)
